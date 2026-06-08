@@ -26,7 +26,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-extrabold text-white mb-6 uppercase tracking-widest">Contact:</h3>
             <ul className="space-y-4">
-              <li className="text-white/80 text-sm font-bold hover:text-white transition-colors cursor-default">info@in3d.mk</li>
+              <li className="text-white/80 text-sm font-bold hover:text-white transition-colors cursor-default">info@roomyxr.com</li>
             </ul>
           </div>
 

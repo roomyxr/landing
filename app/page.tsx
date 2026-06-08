@@ -147,7 +147,7 @@ export default function Home() {
 
       <Navbar />
       
-      <div className="relative z-20">
+      <div className="relative z-30">
         <Hero />
       </div>
       
@@ -160,6 +160,8 @@ export default function Home() {
         <SpecialOffer />
         <TheB />
         <Faq />
+      </div>
+      <div className="relative z-40">
         <Footer />
       </div>
     </main>
