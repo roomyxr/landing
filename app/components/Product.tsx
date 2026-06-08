@@ -1,0 +1,104 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+
+export default function Product() {
+  const features = [
+    {
+      name: 'AI Assistant',
+      subname: 'You New Study Bestie.',
+      description: 'Forget basic bots that just give you "error" massages. Our AI is an emotionally intelligent companion a cute robot or animal that actually gets you. It track your progres, suggests breaks when you are hitting wall, and adapts to your mood. It`s not a tutor; it`s a co-pilot for your success.',
+      number: '1',
+    },
+    {
+      name: 'Lo-Fl Immersion',
+      subname: 'The Ultimate Focus Hack.',
+      description: 'We swapped cold, clinical interfaces for warm, minimalist Lo-Fi aesthetics. Your VR room isn`t static the lighting and vibe shift based on whether you`re in "deep work" mode or "mediatation" mode. It`s personalized space that breathes with you.',
+      number: '2',
+    },
+    {
+      name: 'Spatial Productivity',
+      subname: 'God Mode Enabled.',
+      description: 'Why settle for one tiny screen? In Roomy, you can surround yourself with interactive windows PDFs, 3D models, videos and more floating in your space. Need to save a genius thought? Use Speech to Text to turn your yapping into organized PDF notes instantly.',
+      number: '3',
+    },
+    {
+      name: 'Social Co-Working',
+      subname: 'No Social Anxiety.',
+      description: 'Success is better with the squad. Hop into social modules where you can study, vibe to music, or just exist in the same space as others without the pressure of "real world" distractions. It`s the digital version of a quiet coffe shop corner.',
+      number: '4',
+    },
+  ];
+
+  return (
+    <section id="product" className="py-24 sm:py-32">
+      <div className="mx-auto max-w-screen-2xl px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-16 items-start">
+          
+          {/* Left Column: Heading + Image */}
+          <div className="flex flex-col lg:sticky lg:top-32">
+            <motion.h2 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl w-full font-extrabold tracking-tighter text-white sm:text-5xl mb-12 p-8 bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl "
+            >
+              The Glow-Up:<br />
+              <span className="text-white text-nowrap text-[clamp(1rem,7vw,3rem)] font-normal">How Roomy Fixes the Vibe</span>
+            </motion.h2>
+            
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="relative w-full aspect-square mx-auto lg:mx-0"
+            >
+              <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
+              <div className="relative w-full h-full flex items-center justify-center">
+                 <Image 
+                    src="/Prod_baner_a.svg" 
+                    alt="Product Illustration" 
+                    width={800} 
+                    height={800} 
+                    className="w-full h-auto p-8"
+                    priority
+                  />
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Right Column: Features List */}
+          <div className="flex flex-col bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl p-8">
+            <dl className="grid grid-cols-1 gap-y-8">
+              {features.map((feature, index) => (
+                <motion.div 
+                  key={feature.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex flex-col relative group"
+                >
+                  <dt className="text-2xl pl-18 font-extrabold leading-7 text-white">
+                    <div className="absolute left-0 top-0 flex h-14 w-14 items-center justify-center rounded-4xl text-white font-extrabold text-2xl border-4 border-teal-400 transition-all group-hover:rotate-6">
+                      {feature.number}
+                    </div>
+                    <h3 className="text-xl font-extrabold leading-7 text-white">
+                    {feature.name}
+                    <span className="block text-sm font-bold text-white/80 mt-1 uppercase tracking-widest">{feature.subname}</span>
+                    </h3>
+                  </dt>
+                  <dd className="mt-4 flex flex-auto flex-col text-lg leading-7 text-white/80 font-medium">
+                    <p className="flex-auto">{feature.description}</p>
+                  </dd>
+                </motion.div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
