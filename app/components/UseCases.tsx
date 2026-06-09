@@ -35,7 +35,7 @@ export default function UseCases() {
   return (
     <section id="use-cases" className="py-24 sm:py-32">
       <div className="mx-auto max-w-screen-2xl px-6 lg:px-8">
-        <div className="mx-auto max-w-screen-2xl text-center mb-20 p-8 bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl transform-gpu">
+        <div className="mx-auto max-w-screen-2xl text-center mb-20 p-8 bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl">
           <h2 className="text-3xl font-extrabold tracking-tighter text-white sm:text-5xl">
             The Major Flex!
             <span className="block sm:inline-block text-nowrap text-white text-[clamp(1rem,8vw,3rem)] font-normal sm:ml-3">
@@ -50,7 +50,7 @@ export default function UseCases() {
           {rooms.map((room) => (
             <div 
               key={room.title} 
-              className={`group p-8 border-t-2 border-r-2 ${room.color} hover:scale-[1.03] transition-all duration-500 bg-opacity-40 backdrop-blur-sm relative overflow-hidden shadow-xl transform-gpu will-change-transform`}
+              className={`group p-8 border-t-2 border-r-2 ${room.color} hover:scale-[1.03] transition-transform duration-300 bg-opacity-40 backdrop-blur-sm relative overflow-hidden shadow-xl`}
             >
               <h3 className="text-xl text-nowrap font-extrabold text-white tracking-tighter mb-2">
                 {room.title}
@@ -64,6 +64,7 @@ export default function UseCases() {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

@@ -10,14 +10,16 @@ export default function SpecialOffer() {
     { title: 'Lifetime Premium Access:', description: 'Pay once, own it forever. No monthly “tax” on your success.' },
     { title: 'Founder Badge:', description: 'A unique in-app flex so everyone knows you were here from Day 1.' },
     { title: 'Private Executive VR Rooms:', description: 'Exclusive, high-end environments reserved only for Founders.' },
-    { title: 'Early Beta Access:', description: 'Test new features, AI companions, and environments before the world sees them.' }, // Поправено 'before world sees'
+    { title: 'Early Beta Access:', description: 'Test new features, AI companions, and environments before the world sees them.' },
     { title: 'Private Discord Sanctuary:', description: 'Direct line to the devs and a community of high-achieving early adopters.' },
   ];
 
   return (
     <section id="special-offer" className="py-24 sm:py-32">
       <div className="mx-auto max-w-screen-2xl px-6 lg:px-8">
-        <div className="mx-auto max-w-screen-2xl text-center mb-20 p-8 bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl transform-gpu">
+        
+        {/* Хедер - Комплетно статичен без хардверски класи */}
+        <div className="mx-auto max-w-screen-2xl text-center mb-20 p-8 bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl">
           <h2 className="text-3xl font-extrabold tracking-tighter text-white sm:text-5xl">
             The Founder`s Legacy!
             <span className="block sm:inline-block text-nowrap text-white text-[clamp(1rem,8vw,3rem)] font-normal sm:ml-3">
@@ -28,13 +30,17 @@ export default function SpecialOffer() {
             Stop paying rent for your productivity. Secure your spot as one of the <strong className="text-white">first 100 legends.</strong> Once these slots are gone, they`re gone forever.
           </p>
         </div>
+
         <div className="mx-auto grid grid-cols-1 gap-12 lg:grid-cols-2">
-          <div className="p-8 bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl transform-gpu">
+          
+          {/* Лева картичка - Кит пакет */}
+          <div className="p-8 bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl">
             <h3 className="text-3xl font-extrabold text-white mb-10 tracking-tighter">The Founder`s Kit includes:</h3>
             <ul className="space-y-8">
               {kitItems.map((item) => (
-                <li key={item.title} className="flex flex-col group transition-all duration-300">
+                <li key={item.title} className="flex flex-col group">
                   <span className="font-extrabold text-white text-xl flex items-center gap-2">
+                    {/* transform-gpu е оставен само на штиклираното бидејќи прави scale при hover */}
                     <span className="inline-block text-teal-300 transition-transform duration-300 origin-center transform-gpu group-hover:scale-125">
                       ✔
                     </span>
@@ -47,7 +53,9 @@ export default function SpecialOffer() {
               ))}
             </ul>
           </div>
-          <div className="flex flex-col justify-between relative p-8 bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl transform-gpu">
+
+          {/* Десна картичка - Математика и прогрес бар */}
+          <div className="flex flex-col justify-between relative p-8 bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl">
             <div>
               <h3 className="text-3xl font-extrabold text-white mb-10 tracking-tighter">The Math is Based:</h3>
               <ul className="space-y-6 mb-12">
@@ -63,6 +71,7 @@ export default function SpecialOffer() {
                   </div>
                 </li>
               </ul>
+              
               <div className="mb-4 flex justify-between text-sm font-extrabold text-white uppercase tracking-widest">
                 <span>Status Check:</span>
                 <span>32/100 Claimed</span>
@@ -72,6 +81,8 @@ export default function SpecialOffer() {
               </div>
               <p className="mt-6 text-sm text-white/80 font-bold uppercase tracking-widest">The circle is closing. Don`t be the one who`s “late to the party”</p>
             </div>
+
+            {/* Копче за акција */}
             <div className="text-center mt-auto pt-8">
               <button
                 onClick={() => setIsModalOpen(true)}
@@ -84,6 +95,7 @@ export default function SpecialOffer() {
               </p>
             </div>
           </div>
+
         </div>
       </div>
       <FounderModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

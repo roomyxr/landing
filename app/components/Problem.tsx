@@ -39,7 +39,7 @@ export default function Problem() {
             {problems.map((problem) => (
               <div 
                 key={problem.title}
-                className="flex flex-col bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl p-8 transition-all duration-300 transform-gpu hover:scale-[1.02] group will-change-transform"
+                className="flex flex-col bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl p-8 transition-all duration-300 hover:scale-[1.02] group will-change-transform"
               >
                 <div className="mb-6 flex items-center justify-center text-2xl transform-gpu transition-transform duration-300 group-hover:scale-105">
                   <Image 

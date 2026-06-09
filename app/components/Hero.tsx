@@ -1,14 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import WaitlistModal from './WaitlistModal';
 import StoreBadges from './StoreBadges';
-
-const HeroBannerLazy = dynamic(() => import('./HeroBanner'), {
-  ssr: false,
-  loading: () => <div className="w-full h-[400px] bg-transparent" />
-});
 
 export default function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,7 +13,16 @@ export default function Hero() {
       <div className="mx-auto max-w-screen-2xl px-6 lg:px-8 w-full py-18">
         <div className="flex flex-col lg:grid lg:grid-cols-[0.4fr_0.6fr] lg:items-center gap-y-12">
           <div className="relative z-10 order-2 lg:order-2 lg:col-start-2 lg:my-10">
-            <HeroBannerLazy />
+            <div className="relative w-full h-auto transform-gpu will-change-transform">
+              <Image 
+                src="/hero_baner_a.svg" 
+                alt="Roomy Hero Banner" 
+                width={800} 
+                height={600} 
+                className="w-full h-auto max-w-[120%] lg:max-w-[140%] select-none pointer-events-none mx-auto lg:mx-4 opacity-50"
+                priority
+              />
+            </div>
           </div>
           <div className="relative z-20 mx-auto max-w-2xl lg:mx-0 lg:text-left text-center order-1 lg:order-1 lg:col-start-1">
             <h1 className="text-balance text-4xl font-extrabold tracking-tighter text-white lg:text-5xl">

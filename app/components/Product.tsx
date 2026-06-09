@@ -6,14 +6,14 @@ export default function Product() {
   const features = [
     {
       name: 'AI Assistant',
-      subname: 'Your New Study Bestie.', // Поправено 'You New' во 'Your New'
-      description: 'Forget basic bots that just give you "error" messages. Our AI is an emotionally intelligent companion a cute robot or animal that actually gets you. It tracks your progress, suggests breaks when you are hitting a wall, and adapts to your mood. It`s not a tutor; it`s a co-pilot for your success.', // Поправено 'massages', 'track', 'progres'
+      subname: 'Your New Study Bestie.',
+      description: 'Forget basic bots that just give you "error" messages. Our AI is an emotionally intelligent companion a cute robot or animal that actually gets you. It tracks your progress, suggests breaks when you are hitting a wall, and adapts to your mood. It`s not a tutor; it`s a co-pilot for your success.',
       number: '1',
     },
     {
-      name: 'Lo-Fi Immersion', // Поправено 'Lo-Fl' во 'Lo-Fi'
+      name: 'Lo-Fi Immersion',
       subname: 'The Ultimate Focus Hack.',
-      description: 'We swapped cold, clinical interfaces for warm, minimalist Lo-Fi aesthetics. Your VR room isn`t static the lighting and vibe shift based on whether you`re in "deep work" mode or "meditation" mode. It`s a personalized space that breathes with you.', // Поправено 'mediatation'
+      description: 'We swapped cold, clinical interfaces for warm, minimalist Lo-Fi aesthetics. Your VR room isn`t static the lighting and vibe shift based on whether you`re in "deep work" mode or "meditation" mode. It`s a personalized space that breathes with you.',
       number: '2',
     },
     {
@@ -25,7 +25,7 @@ export default function Product() {
     {
       name: 'Social Co-Working',
       subname: 'No Social Anxiety.',
-      description: 'Success is better with the squad. Hop into social modules where you can study, vibe to music, or just exist in the same space as others without the pressure of "real world" distractions. It`s the digital version of a quiet coffee shop corner.', // Поправено 'coffe'
+      description: 'Success is better with the squad. Hop into social modules where you can study, vibe to music, or just exist in the same space as others without the pressure of "real world" distractions. It`s the digital version of a quiet coffee shop corner.',
       number: '4',
     },
   ];
@@ -34,15 +34,15 @@ export default function Product() {
     <section id="product" className="py-24 sm:py-32">
       <div className="mx-auto max-w-screen-2xl px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-16 items-start">
-          <div className="flex flex-col lg:sticky lg:top-32 transform-gpu will-change-transform">
-            <h2 
-              className="text-3xl w-full font-extrabold tracking-tighter text-white sm:text-5xl mb-12 p-8 bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl "
-            >
+          
+          {/* Лева Колона - Стикната при скрол */}
+          <div className="flex flex-col lg:sticky lg:top-32">
+            <h2 className="text-3xl w-full font-extrabold tracking-tighter text-white sm:text-5xl mb-12 p-8 bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl">
               The Glow-Up:<br />
               <span className="text-white text-nowrap text-[clamp(1rem,7vw,3rem)] font-normal">How Roomy Fixes the Vibe</span>
             </h2>
             
-            <div className="relative w-full aspect-square mx-auto lg:mx-0 transform-gpu">
+            <div className="relative w-full aspect-square mx-auto lg:mx-0">
               <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
               <div className="relative w-full h-full flex items-center justify-center">
                  <Image 
@@ -50,21 +50,24 @@ export default function Product() {
                     alt="Product Illustration" 
                     width={800} 
                     height={800} 
-                    className="w-full h-auto p-8 transform-gpu"
+                    className="w-full h-auto p-8 transform-gpu" // Остана само каде што има вистинска тешка SVG слика
                     loading="lazy"
                   />
               </div>
             </div>
           </div>
-          <div className="flex flex-col bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl p-8 transform-gpu">
+          
+          {/* Десна Колона - Листа на фичери */}
+          <div className="flex flex-col bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl p-8">
             <dl className="grid grid-cols-1 gap-y-8">
               {features.map((feature) => (
                 <div 
                   key={feature.name}
-                  className="flex flex-col relative group transition-all duration-300 transform-gpu will-change-transform"
+                  className="flex flex-col relative group"
                 >
                   <dt className="text-2xl pl-18 font-extrabold leading-7 text-white">
-                    <div className="absolute left-0 top-0 flex h-14 w-14 items-center justify-center rounded-4xl text-white font-extrabold text-2xl border-4 border-teal-400 transition-all duration-300 group-hover:rotate-6 transform-gpu">
+                    {/* Анимацијата со ротација на бројчето ќе работи мазно бидејќи е ситна */}
+                    <div className="absolute left-0 top-0 flex h-14 w-14 items-center justify-center rounded-4xl text-white font-extrabold text-2xl border-4 border-teal-400 transition-transform duration-300 group-hover:rotate-6">
                       {feature.number}
                     </div>
                     <h3 className="text-xl font-extrabold leading-7 text-white">
@@ -79,6 +82,7 @@ export default function Product() {
               ))}
             </dl>
           </div>
+
         </div>
       </div>
     </section>
