@@ -34,8 +34,6 @@ export default function Product() {
     <section id="product" className="py-24 sm:py-32">
       <div className="mx-auto max-w-screen-2xl px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-16 items-start">
-          
-          {/* Лева Колона - Стикната при скрол */}
           <div className="flex flex-col lg:sticky lg:top-32">
             <h2 className="text-3xl w-full font-extrabold tracking-tighter text-white sm:text-5xl mb-12 p-8 bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl">
               The Glow-Up:<br />
@@ -50,14 +48,12 @@ export default function Product() {
                     alt="Product Illustration" 
                     width={800} 
                     height={800} 
-                    className="w-full h-auto p-8 transform-gpu" // Остана само каде што има вистинска тешка SVG слика
+                    className="w-full h-auto p-8"
                     loading="lazy"
                   />
               </div>
             </div>
           </div>
-          
-          {/* Десна Колона - Листа на фичери */}
           <div className="flex flex-col bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl p-8">
             <dl className="grid grid-cols-1 gap-y-8">
               {features.map((feature) => (
@@ -82,7 +78,6 @@ export default function Product() {
               ))}
             </dl>
           </div>
-
         </div>
       </div>
     </section>

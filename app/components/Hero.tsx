@@ -13,7 +13,7 @@ export default function Hero() {
       <div className="mx-auto max-w-screen-2xl px-6 lg:px-8 w-full py-18">
         <div className="flex flex-col lg:grid lg:grid-cols-[0.4fr_0.6fr] lg:items-center gap-y-12">
           <div className="relative z-10 order-2 lg:order-2 lg:col-start-2 lg:my-10">
-            <div className="relative w-full h-auto transform-gpu will-change-transform">
+            <div className="relative w-full h-auto">
               <Image 
                 src="/hero_baner_a.svg" 
                 alt="Roomy Hero Banner" 
