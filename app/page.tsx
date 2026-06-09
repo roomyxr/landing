@@ -141,7 +141,7 @@ export default function Home() {
 
       <div 
         className="absolute inset-0 z-00 pointer-events-none bg-repeat-y bg-top bg-contain" 
-        style={{ backgroundImage: 'url("/bg.svg")', minHeight: '100%' }}
+        style={{ backgroundImage: 'url("/bg_g.svg")', minHeight: '100%' }}
         aria-hidden="true"
       />
 

@@ -1,15 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { div } from 'framer-motion/client';
-
-
 export default function theb() {
     return (
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div 
           className="w-screen mx-auto "
         >
             <h3 className="text-3xl lg:text-5xl font-extrabold text-primary mb-[-10px] tracking-tighter pl-10 lg:pl-40">Backed by the Best:</h3>
@@ -44,6 +37,6 @@ export default function theb() {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 }

@@ -1,13 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
-
 export default function win1() {
     return (
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div 
           className="w-screen mx-auto "
         >
             <h3 className="text-3xl lg:text-5xl font-extrabold text-primary mb-[-10px] tracking-tighter pl-10 lg:pl-40">Why it`s a W:</h3>
@@ -33,6 +28,6 @@ export default function win1() {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 }

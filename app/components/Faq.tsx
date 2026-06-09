@@ -1,7 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
-
 const faqs = [
   {
     question: "Is this just another VR game?",
@@ -33,50 +31,36 @@ export default function Faq() {
   return (
     <section id="faq" className="py-24 sm:py-32">
       <div className="mx-auto max-w-screen-2xl px-6 lg:px-8">
-        <div className="mx-auto max-w-screen-2xl text-center mb-20 p-8 bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl">
-          <motion.h2 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="text-3xl font-extrabold text-nowrap tracking-tighter text-white sm:text-5xl"
-          >
+        <div className="mx-auto max-w-screen-2xl text-center mb-20 p-8 bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl transform-gpu">
+          <h2 className="text-3xl font-extrabold tracking-tighter text-white sm:text-5xl">
             FAQ: 
             <span className="block sm:inline-block text-nowrap text-white text-[clamp(1rem,8vw,3rem)] font-normal sm:ml-3">
               The Vibe Check
             </span>
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-xl text-white/80 font-medium leading-relaxed"
-          >
+          </h2>
+          <p className="text-xl text-white/80 font-medium leading-relaxed mt-4">
             Everything you need to know before you lock in.
-          </motion.p>
+          </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-12 gap-y-10 lg:max-w-none lg:grid-cols-2">
-            {faqs.map((faq, index) => (
-              <motion.div 
+            {faqs.map((faq) => (
+              <div 
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="p-8 bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl"
+                className="p-8 bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl transform-gpu"
               >
-                <dt className="text-xl font-extrabold leading-7 text-white group-hover:text-primary transition-colors tracking-tight">
+                <dt className="text-xl font-extrabold leading-7 text-white tracking-tight">
                   <span className="text-teal-300 mr-3 italic">Q:</span>
                   {faq.question}
                 </dt>
-                <dd className="mt-6 text-lg leading-relaxed text-white/80 font-medium italic border-l-2 border-text-teal-300 pl-6">
+                <dd className="mt-6 text-lg leading-relaxed text-white/80 font-medium italic border-l-2 border-teal-300 pl-6">
                    {faq.answer}
                 </dd>
-              </motion.div>
+              </div>
             ))}
           </dl>
         </div>
+
       </div>
     </section>
   );
