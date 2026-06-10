@@ -48,7 +48,7 @@ export default function Product() {
                     alt="Product Illustration" 
                     width={800} 
                     height={800} 
-                    className="w-full h-auto p-8"
+                    className="w-full transform-gpu h-auto p-8"
                     loading="lazy"
                   />
               </div>
@@ -63,7 +63,7 @@ export default function Product() {
                 >
                   <dt className="text-2xl pl-18 font-extrabold leading-7 text-white">
                     {/* Анимацијата со ротација на бројчето ќе работи мазно бидејќи е ситна */}
-                    <div className="absolute left-0 top-0 flex h-14 w-14 items-center justify-center rounded-4xl text-white font-extrabold text-2xl border-4 border-teal-400 transition-transform duration-300 group-hover:rotate-6">
+                    <div className="absolute left-0 top-0 flex h-14 w-14 items-center justify-center rounded-4xl text-white font-extrabold text-2xl border-4 border-teal-400 transition-transform duration-300 md:group-hover:rotate-6">
                       {feature.number}
                     </div>
                     <h3 className="text-xl font-extrabold leading-7 text-white">

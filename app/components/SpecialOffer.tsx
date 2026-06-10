@@ -35,7 +35,7 @@ export default function SpecialOffer() {
               {kitItems.map((item) => (
                 <li key={item.title} className="flex flex-col group">
                   <span className="font-extrabold text-white text-xl flex items-center gap-2">
-                    <span className="inline-block text-teal-300 transition-transform duration-300 origin-center group-hover:scale-125">
+                    <span className="inline-block text-teal-300 transition-transform duration-300 origin-center md:group-hover:scale-125">
                       ✔
                     </span>
                     {item.title}
@@ -78,7 +78,7 @@ export default function SpecialOffer() {
             <div className="text-center mt-auto pt-8">
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="block w-full rounded-full bg-white px-8 py-3 text-xl font-extrabold text-primary shadow-2xl hover:bg-gray-100 transition-all duration-300 hover:scale-105 uppercase tracking-tighter"
+                className="block w-full rounded-full bg-white px-8 py-3 text-xl font-extrabold text-primary shadow-2xl hover:bg-gray-100 transition-all duration-300 md:hover:scale-105 uppercase tracking-tighter"
               >
                 CLAIM MY FOUNDER STATUS
               </button>

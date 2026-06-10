@@ -19,7 +19,7 @@ export default function Hero() {
                 alt="Roomy Hero Banner" 
                 width={800} 
                 height={600} 
-                className="w-full h-auto max-w-[120%] lg:max-w-[140%] select-none pointer-events-none mx-auto lg:mx-4 opacity-50"
+                className="w-full h-auto max-w-[120%] lg:max-w-[140%] select-none pointer-events-none mx-auto lg:mx-4 transform-gpu opacity-50"
                 priority
               />
             </div>
@@ -45,7 +45,7 @@ export default function Hero() {
                 </a>
                 <button 
                   onClick={() => setIsModalOpen(true)}
-                  className="rounded-full bg-transparent border-2 border-white px-8 py-3 text-base font-bold text-white shadow-sm hover:bg-white/10 transition-all hover:scale-105 uppercase"
+                  className="rounded-full bg-transparent border-2 border-white px-8 py-3 text-base font-bold text-white shadow-sm hover:bg-white/10 transition-all md:hover:scale-105 uppercase"
                 >
                   Join WaitList
                 </button>

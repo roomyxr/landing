@@ -50,7 +50,7 @@ export default function UseCases() {
           {rooms.map((room) => (
             <div 
               key={room.title} 
-              className={`group p-8 border-t-2 border-r-2 ${room.color} hover:scale-[1.03] transition-transform duration-300 bg-opacity-40 backdrop-blur-sm relative overflow-hidden shadow-xl`}
+              className={`group p-8 border-t-2 border-r-2 ${room.color} md:hover:scale-[1.03] transition-transform duration-300 bg-opacity-40 backdrop-blur-sm relative overflow-hidden shadow-xl`}
             >
               <h3 className="text-xl text-nowrap font-extrabold text-white tracking-tighter mb-2">
                 {room.title}

@@ -105,7 +105,7 @@ export default function Footer() {
           <div className="flex flex-col items-start lg:items-end justify-start">
             <a
               href="#special-offer"
-              className="rounded-full bg-white px-8 py-3 text-sm font-extrabold text-primary shadow-2xl hover:bg-gray-100 transition-transform duration-300 transform-gpu hover:scale-110 uppercase tracking-widest"
+              className="rounded-full bg-white px-8 py-3 text-sm font-extrabold text-primary shadow-2xl hover:bg-gray-100 transition-transform duration-300 transform-gpu md:hover:scale-110 uppercase tracking-widest"
             >
               BECOME FOUNDER
             </a>

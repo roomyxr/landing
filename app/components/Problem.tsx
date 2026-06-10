@@ -39,15 +39,15 @@ export default function Problem() {
             {problems.map((problem) => (
               <div 
                 key={problem.title}
-                className="flex flex-col bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl p-8 transition-all duration-300 hover:scale-[1.02] group will-change-transform"
+                className="flex flex-col bg-primary/40 border-t-2 border-r-2 border-primary/60 overflow-hidden backdrop-blur-sm shadow-xl p-8 transition-all duration-300 md:hover:scale-[1.02] group will-change-transform"
               >
-                <div className="mb-6 flex items-center justify-center text-2xl transition-transform duration-300 group-hover:scale-105">
+                <div className="mb-6 flex items-center justify-center text-2xl transition-transform duration-300 md:group-hover:scale-105">
                   <Image 
                     src={problem.imageSrc} 
                     alt={problem.title} 
                     width={800} 
                     height={600} 
-                    className="w-full h-auto select-none pointer-events-none opacity-75"
+                    className="w-full h-auto select-none pointer-events-none transform-gpu opacity-75"
                     loading="lazy"
                   />
                 </div>
